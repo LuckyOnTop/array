@@ -1,0 +1,38 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+p#brands {
+  text-align: center;
+}
+
+button {
+  background-color: #00ff00; /* Neon green */
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00cc00; /* Slightly darker green on hover */
+}
+
+button:active {
+  background-color: #009900; /* Slightly darker green when clicked */
+}

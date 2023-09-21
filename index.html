@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T-Shirt Brands</title>
+</head>
+<body>
+
+<h1>T-Shirt Brands</h1>
+
+<p id="brands"></p>
+
+<button onclick="showBrands()">Display All Brands</button>
+<button onclick="sliceBrands()">Slice First 5 Brands</button>
+<button onclick="addBrand()">Add a Brand</button>
+<button onclick="removeBrand()">Remove a Brand</button>
+
+<script>
+  
+  const tshirtBrands = ['DBTK', 'REVEL', 'SKOOP COMMUNITY', 'DAILY GRIND', 'NCK AUTOMATIC', 'GNARLY', 'RAGS TO RICHES', 'WE DROOL CO', 'TEAM MANILA', 'THREEDOWN'];
+
+  function showBrands() {
+    const brandsElement = document.getElementById('brands');
+    brandsElement.textContent = 'T-Shirt Brands: ' + tshirtBrands.join(', ');
+  }
+
+  function sliceBrands() {
+    const slicedBrands = tshirtBrands.slice(5);
+    const brandsElement = document.getElementById('brands');
+    brandsElement.textContent = 'Sliced Brands: ' + slicedBrands.join(', ');
+  }
+
+  function addBrand() {
+    const newBrand = prompt('Enter a new brand:');
+    if (newBrand) {
+      tshirtBrands.push(newBrand);
+      showBrands();
+    }
+  }
+
+  function removeBrand() {
+    tshirtBrands.pop();
+    showBrands();
+  }
+</script>
+
+</body>
+</html>
